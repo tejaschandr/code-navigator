@@ -47,7 +47,7 @@ def main():
         
         if not Path(db_path).exists():
             print(f" No index found at {codebase_path}")
-            print(f"   Run: cn index {codebase_path}")
+            print(f"   Run: nav index {codebase_path}")
             sys.exit(1)
         
         question = ' '.join(args.question)
@@ -60,7 +60,7 @@ def main():
         
         if not Path(db_path).exists():
             print(f" No index found at {codebase_path}")
-            print(f"   Run: cn index {codebase_path}")
+            print(f"   Run: nav index {codebase_path}")
             sys.exit(1)
         
         nav = CodeNavigator(db_path=str(db_path))

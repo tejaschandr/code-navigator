@@ -1,6 +1,6 @@
 # Codebase Navigator
 
-My attempt at a CLI tool because I don't like copilot
+My first attempt at a CLI tool. Acts as a codebase indexer that is much faster than Copilot, but less good. Uses qwen2.5:7b, but can be replaced for a better model if your machine is better. Meant to work offline. 
 
 ## Prerequisites
 
@@ -10,11 +10,14 @@ My attempt at a CLI tool because I don't like copilot
 ## Installation
 ```bash
 # Install from GitHub
-pip install git+https://github.com/tejaschandr/code-navigator.git --break-system-packages
+pip install git+https://github.com/tejaschandr/code-navigator.git
 
 # Pull required models
 ollama pull qwen2.5:7b
 ollama pull nomic-embed-text
+
+# Run ollama serve (offline or online)
+ollama serve
 ```
 
 ## Usage
