@@ -10,7 +10,7 @@ My attempt at a CLI tool because I don't like copilot
 ## Installation
 ```bash
 # Install from GitHub
-pip install git+https://github.com/tejaschandr/code-navigator.git
+pip install git+https://github.com/tejaschandr/code-navigator.git --break-system-packages
 
 # Pull required models
 ollama pull qwen2.5:7b
