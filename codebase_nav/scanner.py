@@ -2,6 +2,17 @@ import os
 from pathlib import Path
 
 class CodeScanner:
+    """
+    Indexes code chunks from a repository and stores them with embeddigns in a database.
+
+    Attributes:
+        client (chromadb.PersistentClient): The ChromaDB client for storing indexed data.
+        collection (chromadb.Collection): The collection containing the indexed code chunks.
+        scanner (CodeScanner): The code scanner for finding code files.
+        chunker (CodeChunker): The code chunker for breaking code files into chunks.
+        embedder (CodeEmbedder): The code embedder for generating embeddings for code chunks.
+    
+    """
     def __init__(self, root_path):
         self.root_path = Path(root_path)
         self.extensions = {

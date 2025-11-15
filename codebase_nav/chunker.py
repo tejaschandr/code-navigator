@@ -126,7 +126,6 @@ class CodeChunker:
         return chunks
     
     def _chunk_fixed_size(self, content, filepath, chunk_size=500):
-        """Fallback: fixed-size chunks with overlap"""
         lines = content.split('\n')
         chunks = []
         

@@ -7,6 +7,11 @@ from .embedder import CodeEmbedder
 from .utils import get_db_path
 
 class CodeIndexer:
+    """Class for indexing a code repository; creats an embedding database
+        Methods:
+            -index_repository: Scans the specified directory, chunks the code files, embeds them, and indexes into a ChromaDB collection
+            - get_stats: provides statistics on the indexed code chunks
+    """
     def __init__(self, db_path=None):
         if db_path is None:
             db_path = ".codebase-nav"
@@ -23,6 +28,7 @@ class CodeIndexer:
         self.embedder = CodeEmbedder()
     
     def index_repository(self, root_path="."):
+        # Scan and process code files from specifid directory
         print(f" Scanning {root_path}...")
         self.scanner.root_path = Path(root_path)
         files = self.scanner.scan()
