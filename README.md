@@ -1,6 +1,6 @@
 # Codebase Navigator
 
-My first attempt at a CLI tool. Acts as a codebase indexer that is much faster than Copilot, but less good. Uses qwen2.5:7b, but can be replaced for a better model if your machine is better. Meant to work offline. 
+First attempt at a CLI tool. Meant to work offline. 
 
 ## Prerequisites
 
